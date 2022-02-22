@@ -1,0 +1,46 @@
+1. Create tables for the above list given
+
+    -- create schema mysqltask;
+    -- use mysqltask;
+
+
+    -- create table guvi(
+    --  	users varchar(255),
+    --     codekata int,
+    -- 	attendance int,
+    -- 	topics varchar(255),
+    -- 	tasks varchar(255),
+    -- 	company_drives varchar(255),
+    --     mentors varchar(255),
+    --    students_activated_courses varchar(255),
+    --    courses varchar(255)
+    --  );
+    -- select * from guvi
+2. insert at least 5 rows of values in each table
+    
+    -- Insert into guvi values ('Hitesh','90','38','mySQL','createsqltable','0','Nagarajan','9','fullstack');
+    -- Insert into guvi values ('Vishal','80','36','mySQL','createsqltable','0','Nagarajan','6','fullstack');
+    -- Insert into guvi values ('James','40','18','mySQL','createsqltable','0','Ram','3','fullstack');
+    -- Insert into guvi values ('Sam','46','23','mySQL','createsqltable','0','karan','1','fullstack');
+    -- Insert into guvi values ('putin','71','38','mySQL','createsqltable','0','ravi','1','fullstack');
+    -- select * from guvi
+    
+3. get number problems solved in codekata by combining the users
+
+     -- select sum(codekata) as totalcodekata  from guvi;
+     
+4. display the no of company drives attended by a user     
+     
+     -- select company_drives from guvi where users ='Hitesh';
+     
+5. combine and display students_activated_courses and courses for a specific user groping them based on the course
+     
+     -- select sum(students_activated_courses) and sum(courses) from guvi where users = 'Hitesh';
+   
+6. list all the mentors
+     
+     -- select mentors from guvi group by mentors;
+    
+7. list the number of students that are assigned for a mentor
+
+    -- select mentors,count(*) as number_of_students from guvi group by mentors;
